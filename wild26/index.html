@@ -87,13 +87,85 @@
                         </p>
                         <h5>Invited Speakers</h5>
                         <p>
-                            <ul>
+                            <ul class="speakers">
                                 <li>Pascal Baumann, Max Planck Institute for Software Systems</li>
                                 <li>Sandra Kiefer, University of Oxford</li>
-                                <li>Richard Mayr, University of Edinburgh</li>
+                                <li><b>How not to go bankrupt: Finding optimal strategies in solvency games</b><br>
+<i>Richard Mayr (University of Edinburgh)</i><br>
+
+<details>
+  <summary style="margin-top:2px;">Abstract (click to expand)</summary>
+  <p>
+    Solvency games are a gambling problem on infinite-state MDPs where the investor's
+    fortune, a natural number n, is the state. In every round, the investor chooses
+    an action from a finite action set Act = {A,B,...}, and every action yields a
+    distribution over integer-valued gains/losses in an interval [-x,+y].
+  </p>
+  <p>
+    The risk-averse investor wants to maximize the chance of staying solvent,
+    i.e., to minimize the probability of eventual ruin (reaching a fortune below zero).
+    A generalized version adds control-states, and thus becomes a problem about
+    1-counter MDPs.
+  </p>
+  <p>
+    It is easy to show that solvency games always admit optimal memoryless
+    deterministic strategies σ: ℕ → Act, i.e., the optimal action depends only
+    on the fortune n. However, how does the function σ behave? If the fortune n
+    is sufficiently large, does it suffice to always pick an action σ(n) with
+    maximal expected payoff? Is σ eventually constant, or at least eventually
+    periodic? And is σ computable?
+  </p>
+  <p>
+    Already in the case of gains in the interval [-3,+1], it is possible for the
+    optimal strategy to be unique but aperiodic (disproving a conjecture of
+    Kucera: RP'2012). However, in the special case of gains in [-2,+1] there
+    always exists an optimal strategy that either has a pure tail or strictly
+    alternates between just two actions.
+  </p>
+  <p>
+    The optimal strategy is computable if it is unique (but without any known
+    complexity bound). Moreover, some optimal strategy is computable (in time
+    polynomial in n) in the case of gains in [-x,+1], while computability in
+    the general case remains open.
+  </p>
+</details>
+                                </li>
                                 <li>Igor Potapov, University of Liverpool</li>
-                                <li>Neha Rino, University of Warwick</li>
-                                <li>Markus Whiteland, Loughborough University</li>
+                                <li><b>Intersecting Dense Automata: Constructions, Complexity and Certificates.</b><br>
+<i>Neha Rino (University of Warwick)</i><br>
+
+<details>
+  <summary>Abstract (click to expand)</summary>
+<p>  Given $k$ nondeterministic finite automata (NFA) $A_1, \dots, A_k$, finding an NFA for the language $L(A_1) \cap \dots \cap L(A_k)$ is a basic problem in automata theory. We observe that the classical Cartesian product construction is
+non-optimal in the worst case, that is, if the automata have many transitions.
+For a fixed alphabet, the Cartesian product of two NFA may have $\Theta(m^2)$ transitions if these NFA have at most $n$ states and $m$ transitions each. 
+</p><p>
+ In this talk, we describe alternative constructions with $O(m n)$ transitions;
+or $O(m n^{k-1})$ for the intersection of $k$ NFA (for fixed $k \ge 2$ and alphabet $\Sigma$). This gives a faster algorithm for deciding NFA intersection emptiness, that is, deciding whether $k$ given NFA accept a word in common.
+We also show that this new algorithm is optimal, unless there exists a breakthrough
+combinatorial algorithm for detecting $(k+1)$-cliques in undirected graphs.
+ Lastly, we show how these new product constructions allow us to certify NFA intersection emptiness faster. </p>
+</details></li>
+                                <li>
+                                <b>Automaticity aspects of combinatorial complexity functions of infinite words</b><br>
+<i>Markus Whiteland, University of Loughborough</i><br>
+
+<details>
+  <summary>Abstract (click to expand)</summary>
+
+  <p>
+    Infinite words can be used to encode interesting properties of the orbits of discrete dynamical systems. Analysing the complexity of such a system may then be analysed through this encoding. Combinatorially speaking, quite often its complexity is measured through its finite factors, or finite contiguous blocks appearing in the infinite encoding. For example, the factor complexity function (counting the number of distinct blocks of a given length) reveals interesting global properties of the word, and the notion has been applied successfully, e.g., in transcendental number theory. Other combinatorial complexity functions have also been introduced in recent years.
+  </p>
+
+  <p>
+    When an infinite word has a finite description (e.g., it is generated by a Deterministic Finite Automaton with Output (DFAO)), one might hope that its combinatorial complexity functions also have finite descriptions (e.g., given by a weighted automaton over the integers). In this talk, I will give an overview of automatic aspects of combinatorial complexity functions of sequences generated by DFAOs and discuss some recent results and ongoing research about the so-called binomial complexity functions (functions that count factors up to similarity of scattered subword structures) of automatic sequences.
+  </p>
+
+  <p>
+    The talk is based on joint work with M. Rigo, M. Stipulanti, and N. Wingate.
+  </p>
+
+</details></li>
                             </ul>
                         </p>
                         <h5>Early Career Talks</h5>

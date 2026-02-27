@@ -633,3 +633,10 @@ a.email{
 #participant-talks summary{
 	margin-bottom: 10px;;
 }
+
+summary { 
+margin-top:2px; }
+
+.speakers li {
+	margin-bottom: 5px;
+}
