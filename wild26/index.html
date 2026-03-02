@@ -88,7 +88,42 @@
                         <h5>Invited Speakers</h5>
                         <p>
                             <ul class="speakers">
-                                <li><b>To be announced.</b><br><i>Pascal Baumann, Max Planck Institute for Software Systems</i></li>
+                                <li><b>Verification of DCPS with Bounded Context-Switching
+.</b><br><i>Pascal Baumann, Max Planck Institute for Software Systems</i>
+
+<details>
+  <summary style="margin-top:2px;">Abstract (click to expand)</summary>
+  <p>
+    Multi-pushdown automata (MPDA) are a classic computational model
+that can be used to capture the behavior of multithreaded recursive
+programs. Here, each parallel thread is simply modeled by a single
+stack, and there is a fixed number of them. Due to the well known
+fact that most verification problems are undecidable for MPDA, even
+with just two stacks, the literature contains many different ways
+to restrict the runs of this model, in such a manner as to recover
+decidability. A popular restriction of this kind is known as bounded
+context-switching: For a fixed bound k, every parallel thread (or
+stack) may only be interrupted by another thread up to k times.
+</p><p>
+We consider an extended setting, where the number of parallel
+threads is not fixed, and more of them can be spawned dynamically
+during execution. This gives rise to the model of dynamic networks
+of concurrent pushdown systems (DCPS), which we still restrict with
+bounded context-switching. In this setting, we consider various
+verification questions, that have been asked for similar models
+in the past. These include state reachability, non-termination
+(with and without assumptions on fairness), and boundedness of the
+thread buffer. Moreover we consider the novel verification problem
+of Dyck inclusion: Given a model with action sequences over some
+alphabet of bracket pairs, are all its executions well-bracketed?
+Our results close a preexisting complexity gap for state reachability,
+and settle the complexity of several other verification problems,
+where in many cases even decidability was unknown before.
+  </p>
+</details>
+
+
+</li>
                                 <li><b>To be announced.</b><br><i>Sandra Kiefer, University of Oxford</i></li>
                                 <li><b>How not to go bankrupt: Finding optimal strategies in solvency games</b><br>
 <i>Richard Mayr, University of Edinburgh</i><br>
