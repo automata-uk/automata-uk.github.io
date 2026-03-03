@@ -11,10 +11,12 @@
     <!-- MathJax for LaTeX rendering -->
     <script>
     window.MathJax = {
-        tex: { inlineMath: [
+        tex: {
+            inlineMath: [
                 ['$', '$'],
                 ['\\(', '\\)']
-            ] },
+            ]
+        },
         svg: { fontCache: 'global' }
     };
     </script>
@@ -78,137 +80,393 @@
                 <div id="program">
                     <h3>Programme</h3>
                     <p>
-                        The programme will consist of six invited talks of around one hour, and short contributed talks from participants.
-                    </p>
-                    <h5>Invited Speakers</h5>
-                    <p>
+                        The programme will consist of six invited talks of around one hour, and 9 short talks from early career researchers. The invited speakers are:
                         <ul class="speakers">
-                            <li><b>Verification of DCPS with Bounded Context-Switching</b><br><i>Pascal Baumann, Max Planck Institute for Software Systems</i>
-                                <details>
-                                    <summary style="margin-top:2px;">Abstract (click to expand)</summary>
-                                    <p>
-                                        Multi-pushdown automata (MPDA) are a classic computational model
-                                        that can be used to capture the behavior of multithreaded recursive
-                                        programs. Here, each parallel thread is simply modeled by a single
-                                        stack, and there is a fixed number of them. Due to the well known
-                                        fact that most verification problems are undecidable for MPDA, even
-                                        with just two stacks, the literature contains many different ways
-                                        to restrict the runs of this model, in such a manner as to recover
-                                        decidability. A popular restriction of this kind is known as bounded
-                                        context-switching: For a fixed bound k, every parallel thread (or
-                                        stack) may only be interrupted by another thread up to k times.
-                                    </p>
-                                    <p>
-                                        We consider an extended setting, where the number of parallel
-                                        threads is not fixed, and more of them can be spawned dynamically
-                                        during execution. This gives rise to the model of dynamic networks
-                                        of concurrent pushdown systems (DCPS), which we still restrict with
-                                        bounded context-switching. In this setting, we consider various
-                                        verification questions, that have been asked for similar models
-                                        in the past. These include state reachability, non-termination
-                                        (with and without assumptions on fairness), and boundedness of the
-                                        thread buffer. Moreover we consider the novel verification problem
-                                        of Dyck inclusion: Given a model with action sequences over some
-                                        alphabet of bracket pairs, are all its executions well-bracketed?
-                                        Our results close a preexisting complexity gap for state reachability,
-                                        and settle the complexity of several other verification problems,
-                                        where in many cases even decidability was unknown before.
-                                    </p>
-                                </details>
-                            </li>
-                            <li><b>To be announced.</b><br><i>Sandra Kiefer, University of Oxford</i></li>
-                            <li><b>How not to go bankrupt: Finding optimal strategies in solvency games</b><br>
-                                <i>Richard Mayr, University of Edinburgh</i><br>
-                                <details>
-                                    <summary style="margin-top:2px;">Abstract (click to expand)</summary>
-                                    <p>
-                                        Solvency games are a gambling problem on infinite-state MDPs where the investor's
-                                        fortune, a natural number n, is the state. In every round, the investor chooses
-                                        an action from a finite action set Act = {A,B,...}, and every action yields a
-                                        distribution over integer-valued gains/losses in an interval [-x,+y].
-                                    </p>
-                                    <p>
-                                        The risk-averse investor wants to maximize the chance of staying solvent,
-                                        i.e., to minimize the probability of eventual ruin (reaching a fortune below zero).
-                                        A generalized version adds control-states, and thus becomes a problem about
-                                        1-counter MDPs.
-                                    </p>
-                                    <p>
-                                        It is easy to show that solvency games always admit optimal memoryless
-                                        deterministic strategies σ: ℕ → Act, i.e., the optimal action depends only
-                                        on the fortune n. However, how does the function σ behave? If the fortune n
-                                        is sufficiently large, does it suffice to always pick an action σ(n) with
-                                        maximal expected payoff? Is σ eventually constant, or at least eventually
-                                        periodic? And is σ computable?
-                                    </p>
-                                    <p>
-                                        Already in the case of gains in the interval [-3,+1], it is possible for the
-                                        optimal strategy to be unique but aperiodic (disproving a conjecture of
-                                        Kucera: RP'2012). However, in the special case of gains in [-2,+1] there
-                                        always exists an optimal strategy that either has a pure tail or strictly
-                                        alternates between just two actions.
-                                    </p>
-                                    <p>
-                                        The optimal strategy is computable if it is unique (but without any known
-                                        complexity bound). Moreover, some optimal strategy is computable (in time
-                                        polynomial in n) in the case of gains in [-x,+1], while computability in
-                                        the general case remains open.
-                                    </p>
-                                </details>
-                            </li>
-                            <li><b>To be announced.</b><br><i>Igor Potapov, University of Liverpool</i></li>
-                            <li><b>Intersecting Dense Automata: Constructions, Complexity and Certificates.</b><br>
-                                <i>Neha Rino, University of Warwick</i><br>
-                                <details>
-                                    <summary>Abstract (click to expand)</summary>
-                                    <p> Given $k$ nondeterministic finite automata (NFA) $A_1, \dots, A_k$, finding an NFA for the language $L(A_1) \cap \dots \cap L(A_k)$ is a basic problem in automata theory. We observe that the classical Cartesian product construction is
-                                        non-optimal in the worst case, that is, if the automata have many transitions.
-                                        For a fixed alphabet, the Cartesian product of two NFA may have $\Theta(m^2)$ transitions if these NFA have at most $n$ states and $m$ transitions each.
-                                    </p>
-                                    <p>
-                                        In this talk, we describe alternative constructions with $O(m n)$ transitions;
-                                        or $O(m n^{k-1})$ for the intersection of $k$ NFA (for fixed $k \ge 2$ and alphabet $\Sigma$). This gives a faster algorithm for deciding NFA intersection emptiness, that is, deciding whether $k$ given NFA accept a word in common.
-                                        We also show that this new algorithm is optimal, unless there exists a breakthrough
-                                        combinatorial algorithm for detecting $(k+1)$-cliques in undirected graphs.
-                                        Lastly, we show how these new product constructions allow us to certify NFA intersection emptiness faster. </p>
-                                </details>
-                            </li>
-                            <li>
-                                <b>Automaticity aspects of combinatorial complexity functions of infinite words</b><br>
-                                <i>Markus Whiteland, University of Loughborough</i><br>
-                                <details>
-                                    <summary>Abstract (click to expand)</summary>
-                                    <p>
-                                        Infinite words can be used to encode interesting properties of the orbits of discrete dynamical systems. Analysing the complexity of such a system may then be analysed through this encoding. Combinatorially speaking, quite often its complexity is measured through its finite factors, or finite contiguous blocks appearing in the infinite encoding. For example, the factor complexity function (counting the number of distinct blocks of a given length) reveals interesting global properties of the word, and the notion has been applied successfully, e.g., in transcendental number theory. Other combinatorial complexity functions have also been introduced in recent years.
-                                    </p>
-                                    <p>
-                                        When an infinite word has a finite description (e.g., it is generated by a Deterministic Finite Automaton with Output (DFAO)), one might hope that its combinatorial complexity functions also have finite descriptions (e.g., given by a weighted automaton over the integers). In this talk, I will give an overview of automatic aspects of combinatorial complexity functions of sequences generated by DFAOs and discuss some recent results and ongoing research about the so-called binomial complexity functions (functions that count factors up to similarity of scattered subword structures) of automatic sequences.
-                                    </p>
-                                    <p>
-                                        The talk is based on joint work with M. Rigo, M. Stipulanti, and N. Wingate.
-                                    </p>
-                                </details>
-                            </li>
+                            <li>Pascal Baumann, Max Planck Institute for Software Systems</li>
+                            <li>Sandra Kiefer, University of Oxford</li>
+                            <li>Richard Mayr, University of Edinburgh</li>
+                            <li>Igor Potapov, University of Liverpool</li>
+                            <li>Neha Rino, University of Warwick</li>
+                            <li>Markus Whiteland, Loughborough University</li>
                         </ul>
                     </p>
-                    <h5>Early Career Talks</h5>
                     <p>
-                        The program will feature 9 short talks from early career researchers.
+                        Lunch is provided to registered participants only.
                     </p>
-                    <p>
-                        Registration to give a short talk has now closed, but it is still possible to register to attend.
-                        <s>Please <strong>indicate your interest in giving a short talk</strong> on any related topic (approx 10-15 minutes) when registering. PhD Students and Early Career Researchers are particularly encouraged to submit a talk.</s>
-                    </p>
-                    <h5>Schedule</h5>
-                    <p>
-                        The talks will start at 10am on Monday 23rd. Coffee and registration will be available from around 9:30.
-                    </p>
-                    <p>
-                        A detailed programme will be made available in due course.
-                    </p>
-                    <p>
-                        Lunch will be provided.
-                    </p>
+                    <div class="days-container">
+                        <!-- DAY 1 -->
+                        <div class="day-column day-1">
+                            <div class="day-header">
+                                <div class="day-number">Day 1 · Monday</div>
+                            </div>
+                            <!-- 9:30 Coffee -->
+                            <div class="slot">
+                                <div class="slot-time">9:30</div>
+                                <div class="slot-body">
+                                    <div class="card-break">☕ Coffee &amp; Registration</div>
+                                </div>
+                            </div>
+                            <!-- 10:00 Welcome -->
+                            <div class="slot">
+                                <div class="slot-time">10:00</div>
+                                <div class="slot-body">
+                                    <div class="card-break">Welcome</div>
+                                </div>
+                            </div>
+                            <!-- 10:05 Igor Potapov -->
+                            <div class="slot">
+                                <div class="slot-time">10:05</div>
+                                <div class="slot-body">
+                                    <div class="card-invited">
+                                        <div class="card-type">Invited Talk</div>
+                                        <div class="card-title">To be announced</div>
+                                        <div class="card-speaker">Igor Potapov</div>
+                                        <div class="card-affiliation">University of Liverpool</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 11:05 Introductions -->
+                            <div class="slot">
+                                <div class="slot-time">11:05</div>
+                                <div class="slot-body">
+                                    <div class="card-break">Introductions &amp; Small Break<br>
+                                        <span class="card-description">Each attendee will be asked to introduce themselves briefly (30-60 seconds)</span> </div>
+                                </div>
+                            </div>
+                            <!-- 11:25 Contributed x2 — Session C: Logic & Complexity -->
+                            <div class="slot">
+                                <div class="slot-time">11:25</div>
+                                <div class="slot-body">
+                                    <div class="card-session">
+                                        <div class="session-header">
+                                            <div class="session-title">Contributed Talks — Logic &amp; Complexity</div>
+                                            <div class="session-count">2 talks · 30 min</div>
+                                        </div>
+                                        <div class="talk-row">
+                                            <div class="talk-index">1</div>
+                                            <div class="talk-info">
+                                                <div class="talk-title">Synthesis for LTLf+ Obligations</div>
+                                                <div class="talk-speaker">Christian Hagemeier · University of Oxford</div>
+                                            </div>
+                                            <div class="talk-time">15 min</div>
+                                        </div>
+                                        <div class="talk-row">
+                                            <div class="talk-index">2</div>
+                                            <div class="talk-info">
+                                                <div class="talk-title">Algebraic Approaches to Characterizing Complexity Classes</div>
+                                                <div class="talk-speaker">Aidan Evans · University of Cambridge</div>
+                                            </div>
+                                            <div class="talk-time">15 min</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 12:00 Lunch -->
+                            <div class="slot">
+                                <div class="slot-time">12:00</div>
+                                <div class="slot-body">
+                                    <div class="card-break">🍽 Lunch - Bertie & Bella’s</div>
+                                </div>
+                            </div>
+                            <!-- 14:00 Sandra Kiefer -->
+                            <div class="slot">
+                                <div class="slot-time">14:00</div>
+                                <div class="slot-body">
+                                    <div class="card-invited">
+                                        <div class="card-type">Invited Talk</div>
+                                        <div class="card-title">To be announced</div>
+                                        <div class="card-speaker">Sandra Kiefer</div>
+                                        <div class="card-affiliation">University of Oxford</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 15:00 Break -->
+                            <div class="slot">
+                                <div class="slot-time">15:00</div>
+                                <div class="slot-body">
+                                    <div class="card-break">☕ Break</div>
+                                </div>
+                            </div>
+                            <!-- 15:20 Contributed x4 — Session A: Automata Theory -->
+                            <div class="slot">
+                                <div class="slot-time">15:20</div>
+                                <div class="slot-body">
+                                    <div class="card-session">
+                                        <div class="session-header">
+                                            <div class="session-title">Contributed Talks — Automata Theory</div>
+                                            <div class="session-count">4 talks · 60 min</div>
+                                        </div>
+                                        <div class="talk-row">
+                                            <div class="talk-index">1</div>
+                                            <div class="talk-info">
+                                                <div class="talk-title">Polynomial Determinization of Bounded Parity Automata</div>
+                                                <div class="talk-speaker">Daniel Hausmann · University of Liverpool</div>
+                                            </div>
+                                            <div class="talk-time">15 min</div>
+                                        </div>
+                                        <div class="talk-row">
+                                            <div class="talk-index">2</div>
+                                            <div class="talk-info">
+                                                <div class="talk-title">Efficient Learning of Weak Deterministic Büchi Automata</div>
+                                                <div class="talk-speaker">Mona Alluwaym · University of Liverpool</div>
+                                            </div>
+                                            <div class="talk-time">15 min</div>
+                                        </div>
+                                        <div class="talk-row">
+                                            <div class="talk-index">3</div>
+                                            <div class="talk-info">
+                                                <div class="talk-title">An Overview on Algorithmic Results for Automaton (Semi)Groups</div>
+                                                <div class="talk-speaker">Jan Philipp Wächter · University of Manchester</div>
+                                            </div>
+                                            <div class="talk-time">15 min</div>
+                                        </div>
+                                        <div class="talk-row">
+                                            <div class="talk-index">4</div>
+                                            <div class="talk-info">
+                                                <div class="talk-title">Scoped MSO, Register Automata, and Expressions: Equivalence over Data Words</div>
+                                                <div class="talk-speaker">Radosław Piórkowski · University of Warwick</div>
+                                            </div>
+                                            <div class="talk-time">15 min</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 16:20 Break -->
+                            <div class="slot">
+                                <div class="slot-time">16:20</div>
+                                <div class="slot-body">
+                                    <div class="card-break">☕ Break</div>
+                                </div>
+                            </div>
+                            <!-- 16:40 Neha Rino -->
+                            <div class="slot">
+                                <div class="slot-time">16:40</div>
+                                <div class="slot-body">
+                                    <div class="card-invited">
+                                        <div class="card-type">Invited Talk</div>
+                                        <div class="card-title">Intersecting Dense Automata: Constructions, Complexity and Certificates</div>
+                                        <div class="card-speaker">Neha Rino</div>
+                                        <div class="card-affiliation">University of Warwick</div>
+                                        <details>
+                                            <summary>Abstract (click to expand)</summary>
+                                            <p> Given $k$ nondeterministic finite automata (NFA) $A_1, \dots, A_k$, finding an NFA for the language $L(A_1) \cap \dots \cap L(A_k)$ is a basic problem in automata theory. We observe that the classical Cartesian product construction is
+                                                non-optimal in the worst case, that is, if the automata have many transitions.
+                                                For a fixed alphabet, the Cartesian product of two NFA may have $\Theta(m^2)$ transitions if these NFA have at most $n$ states and $m$ transitions each.
+                                            </p>
+                                            <p>
+                                                In this talk, we describe alternative constructions with $O(m n)$ transitions;
+                                                or $O(m n^{k-1})$ for the intersection of $k$ NFA (for fixed $k \ge 2$ and alphabet $\Sigma$). This gives a faster algorithm for deciding NFA intersection emptiness, that is, deciding whether $k$ given NFA accept a word in common.
+                                                We also show that this new algorithm is optimal, unless there exists a breakthrough
+                                                combinatorial algorithm for detecting $(k+1)$-cliques in undirected graphs.
+                                                Lastly, we show how these new product constructions allow us to certify NFA intersection emptiness faster. </p>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 17:40 End -->
+                            <div class="slot">
+                                <div class="slot-time">17:40</div>
+                                <div class="slot-body">
+                                    <div class="card-break">End of Day 1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- DAY 2 -->
+                        <div class="day-column day-2">
+                            <div class="day-header">
+                                <div class="day-number">Day 2 · Tuesday</div>
+                            </div>
+                            <!-- 9:30 Markus Whiteland -->
+                            <div class="slot">
+                                <div class="slot-time">9:30</div>
+                                <div class="slot-body">
+                                    <div class="card-invited">
+                                        <div class="card-type">Invited Talk</div>
+                                        <div class="card-title">Automaticity Aspects of Combinatorial Complexity Functions of Infinite Words</div>
+                                        <div class="card-speaker">Markus Whiteland</div>
+                                        <div class="card-affiliation">Loughborough University</div>
+                                        <details>
+                                            <summary>Abstract (click to expand)</summary>
+                                            <p>
+                                                Infinite words can be used to encode interesting properties of the orbits of discrete dynamical systems. Analysing the complexity of such a system may then be analysed through this encoding. Combinatorially speaking, quite often its complexity is measured through its finite factors, or finite contiguous blocks appearing in the infinite encoding. For example, the factor complexity function (counting the number of distinct blocks of a given length) reveals interesting global properties of the word, and the notion has been applied successfully, e.g., in transcendental number theory. Other combinatorial complexity functions have also been introduced in recent years.
+                                            </p>
+                                            <p>
+                                                When an infinite word has a finite description (e.g., it is generated by a Deterministic Finite Automaton with Output (DFAO)), one might hope that its combinatorial complexity functions also have finite descriptions (e.g., given by a weighted automaton over the integers). In this talk, I will give an overview of automatic aspects of combinatorial complexity functions of sequences generated by DFAOs and discuss some recent results and ongoing research about the so-called binomial complexity functions (functions that count factors up to similarity of scattered subword structures) of automatic sequences.
+                                            </p>
+                                            <p>
+                                                The talk is based on joint work with M. Rigo, M. Stipulanti, and N. Wingate.
+                                            </p>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 10:30 Break -->
+                            <div class="slot">
+                                <div class="slot-time">10:30</div>
+                                <div class="slot-body">
+                                    <div class="card-break">☕ Break</div>
+                                </div>
+                            </div>
+                            <!-- 10:55 Richard Mayr -->
+                            <div class="slot">
+                                <div class="slot-time">10:55</div>
+                                <div class="slot-body">
+                                    <div class="card-invited">
+                                        <div class="card-type">Invited Talk</div>
+                                        <div class="card-title">How Not to Go Bankrupt: Finding Optimal Strategies in Solvency Games</div>
+                                        <div class="card-speaker">Richard Mayr</div>
+                                        <div class="card-affiliation">University of Edinburgh</div>
+                                        <details>
+                                            <summary style="margin-top:2px;">Abstract (click to expand)</summary>
+                                            <p>
+                                                Solvency games are a gambling problem on infinite-state MDPs where the investor's
+                                                fortune, a natural number n, is the state. In every round, the investor chooses
+                                                an action from a finite action set Act = {A,B,...}, and every action yields a
+                                                distribution over integer-valued gains/losses in an interval [-x,+y].
+                                            </p>
+                                            <p>
+                                                The risk-averse investor wants to maximize the chance of staying solvent,
+                                                i.e., to minimize the probability of eventual ruin (reaching a fortune below zero).
+                                                A generalized version adds control-states, and thus becomes a problem about
+                                                1-counter MDPs.
+                                            </p>
+                                            <p>
+                                                It is easy to show that solvency games always admit optimal memoryless
+                                                deterministic strategies σ: ℕ → Act, i.e., the optimal action depends only
+                                                on the fortune n. However, how does the function σ behave? If the fortune n
+                                                is sufficiently large, does it suffice to always pick an action σ(n) with
+                                                maximal expected payoff? Is σ eventually constant, or at least eventually
+                                                periodic? And is σ computable?
+                                            </p>
+                                            <p>
+                                                Already in the case of gains in the interval [-3,+1], it is possible for the
+                                                optimal strategy to be unique but aperiodic (disproving a conjecture of
+                                                Kucera: RP'2012). However, in the special case of gains in [-2,+1] there
+                                                always exists an optimal strategy that either has a pure tail or strictly
+                                                alternates between just two actions.
+                                            </p>
+                                            <p>
+                                                The optimal strategy is computable if it is unique (but without any known
+                                                complexity bound). Moreover, some optimal strategy is computable (in time
+                                                polynomial in n) in the case of gains in [-x,+1], while computability in
+                                                the general case remains open.
+                                            </p>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 12:00 Lunch -->
+                            <div class="slot">
+                                <div class="slot-time">12:00</div>
+                                <div class="slot-body">
+                                    <div class="card-break">🍽 Lunch - Waterhouse Café</div>
+                                </div>
+                            </div>
+                            <!-- 14:00 Contributed x3 — Session B: Probabilistic Models -->
+                            <div class="slot">
+                                <div class="slot-time">14:00</div>
+                                <div class="slot-body">
+                                    <div class="card-session">
+                                        <div class="session-header">
+                                            <div class="session-title">Contributed Talks — Probabilistic Models</div>
+                                            <div class="session-count">3 talks · 45 min</div>
+                                        </div>
+                                        <div class="talk-row">
+                                            <div class="talk-index">1</div>
+                                            <div class="talk-info">
+                                                <div class="talk-title">Markov Chains and Distances</div>
+                                                <div class="talk-speaker">James Main · University of Oxford</div>
+                                            </div>
+                                            <div class="talk-time">15 min</div>
+                                        </div>
+                                        <div class="talk-row">
+                                            <div class="talk-index">2</div>
+                                            <div class="talk-info">
+                                                <div class="talk-title">Can We Lift Randomised Strategies from MDPs to Games?</div>
+                                                <div class="talk-speaker">Mohan Sai Teja Dantam · University of Oxford</div>
+                                            </div>
+                                            <div class="talk-time">15 min</div>
+                                        </div>
+                                        <div class="talk-row">
+                                            <div class="talk-index">3</div>
+                                            <div class="talk-info">
+                                                <div class="talk-title">On the Continuity of the Probabilistic Bisimilarity Distance</div>
+                                                <div class="talk-speaker">Zainab Fatmi · University of Oxford</div>
+                                            </div>
+                                            <div class="talk-time">15 min</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 14:45 Open Problems -->
+                            <div class="slot">
+                                <div class="slot-time">14:45</div>
+                                <div class="slot-body">
+                                    <div class="card-special">
+                                        <div class="card-type">Discussion</div>
+                                        Open Problems &amp; Network Plans
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 15:10 Break -->
+                            <div class="slot">
+                                <div class="slot-time">15:10</div>
+                                <div class="slot-body">
+                                    <div class="card-break">☕ Break</div>
+                                </div>
+                            </div>
+                            <!-- 15:30 Pascal Baumann -->
+                            <div class="slot">
+                                <div class="slot-time">15:30</div>
+                                <div class="slot-body">
+                                    <div class="card-invited">
+                                        <div class="card-type">Invited Talk</div>
+                                        <div class="card-title">Verification of DCPS with Bounded Context-Switching</div>
+                                        <div class="card-speaker">Pascal Baumann</div>
+                                        <div class="card-affiliation">Max Planck Institute for Software Systems</div>
+                                        <details>
+                                            <summary style="margin-top:2px;">Abstract (click to expand)</summary>
+                                            <p>
+                                                Multi-pushdown automata (MPDA) are a classic computational model
+                                                that can be used to capture the behavior of multithreaded recursive
+                                                programs. Here, each parallel thread is simply modeled by a single
+                                                stack, and there is a fixed number of them. Due to the well known
+                                                fact that most verification problems are undecidable for MPDA, even
+                                                with just two stacks, the literature contains many different ways
+                                                to restrict the runs of this model, in such a manner as to recover
+                                                decidability. A popular restriction of this kind is known as bounded
+                                                context-switching: For a fixed bound k, every parallel thread (or
+                                                stack) may only be interrupted by another thread up to k times.
+                                            </p>
+                                            <p>
+                                                We consider an extended setting, where the number of parallel
+                                                threads is not fixed, and more of them can be spawned dynamically
+                                                during execution. This gives rise to the model of dynamic networks
+                                                of concurrent pushdown systems (DCPS), which we still restrict with
+                                                bounded context-switching. In this setting, we consider various
+                                                verification questions, that have been asked for similar models
+                                                in the past. These include state reachability, non-termination
+                                                (with and without assumptions on fairness), and boundedness of the
+                                                thread buffer. Moreover we consider the novel verification problem
+                                                of Dyck inclusion: Given a model with action sequences over some
+                                                alphabet of bracket pairs, are all its executions well-bracketed?
+                                                Our results close a preexisting complexity gap for state reachability,
+                                                and settle the complexity of several other verification problems,
+                                                where in many cases even decidability was unknown before.
+                                            </p>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 16:30 End -->
+                            <div class="slot">
+                                <div class="slot-time">16:30</div>
+                                <div class="slot-body">
+                                    <div class="card-break">End of Workshop</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="register">
                     <h3>Register</h3>
@@ -220,7 +478,8 @@
                         There is no registration fee.
                     </p>
                     <p>
-                        Registration to give a short talk has now closed, but it is still possible to register to attend.
+                        Registration to give a short talk has now closed, but it is still possible to register to attend.<br>
+                        <s>Please <strong>indicate your interest in giving a short talk</strong> on any related topic (approx 10-15 minutes) when registering. PhD Students and Early Career Researchers are particularly encouraged to submit a talk.</s>
                     </p>
                     <h5>Financial Support:</h5>
                     <p>

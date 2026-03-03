@@ -131,7 +131,7 @@ fieldset p label {
 fieldset form input, fieldset form select, fieldset form textarea {
 	padding:5px;
 	color:#333333;
-	font-size:13px;
+	font-size:14px;
 	font-family: "Source Sans Pro","sans-serif";
 	border:1px solid #ddd;
 }
@@ -504,139 +504,278 @@ a.email{
 
 
 
-.schedule {
-  display: grid;
-  grid-template-columns: repeat(360, 1fr); /* 1 column per minute from 09:30 to 17:30 */
-  gap: 2px;
-  font-family: sans-serif;
-  margin-bottom: 5px;
-}
-
-
-.day, .daylabel{
-  display: contents; /* Allows grid items inside to span across the shared grid */
-}
-
-.block  {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-column: span 1;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 4px;
-  overflow: hidden;
-}
-
-.daylabel > div {
-   grid-column: 1 / span 200;
-   font-size:16px;
-}
-
-.block .label {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: bold;
-  font-size: 12px;
-  color: white;
-}
-.block .label a {
-	color: white;
-  }
-
-.block .time {
-  font-size: 12px;
-  color: #eee;
-  padding: 2px 0;
-}
-
-/* Session types */
-.block.coffee       { background-color: #a1887f; }
-.block.lunch        { background-color: #4caf50; }
-.block.invited      { background-color: #1976d2; }
-.block.participant  { background-color: #f57c00; }
-.block.special      { background-color: #9c27b0; }
-.block.welcome      { background-color: #00796b; }
-.block.other        { background-color: #607d8b; }
-.block.open         { background-color: #388e3c; }
-.block.dinner       { background-color: #c2185b; }
-.block.tour         { background-color: #6d4c41; }
-
-
-.speaker-grid {
-    display: grid;
-    grid-template-columns: 150px 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 20px;
-    margin-bottom: 40px;
-    align-items: start;
-}
-
-.speaker-header {
-    grid-column: 1 / -1; /* spans all columns */
-    font-weight: bold;
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.speaker-photo img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.speaker-talk, .speaker-tutorial {
-    font-size: 0.95rem;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-    .speaker-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .speaker-header {
-        grid-column: 1;
-    }
-
-    .speaker-photo img {
-        max-width: 200px;
-        margin: 0 auto;
-        display: block;
-    }
-}
-
-.session-time {
-	font-size: 1.1em;
-	color: #666;
-	margin-bottom: 5px;
-	display: block;
-}
-.session-time::after{
-	content: " (Click titles to expand abstracts)";
-	font-size:0.8em;
-	color:#555
-}
-#participant-talks h5 { 
-	padding-bottom: 2px;
-	margin-top: 5px;
-	color: var(--accent);
-}
-
-#participant-talks details {
-	max-width: 1200px;
-}
-
-#participant-talks summary{
-	margin-bottom: 10px;;
-}
-
 summary { 
 margin-top:2px; }
 
-.speakers li {
-	margin-bottom: 5px;
-}
+
+
+
+
+
+ :root {
+    --bg: #f5f2eb;
+    --ink: #1a1714;
+    --muted: #7a7065;
+    --rule: #d4cec4;
+    --invited-bg: #1a1714;
+    --invited-fg: #e5e2db;
+    --contributed-bg: #ffffff;
+    --contributed-border: #c8bfb0;
+    --break-bg: #edeae3;
+    --session-label: #5a4f45;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+
+ 
+
+  .workshop-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .swatch-invited { background: var(--invited-bg); }
+  .swatch-contributed { background: var(--contributed-bg); border: 1.5px solid var(--contributed-border); }
+  .swatch-break { background: var(--break-bg); border: 1.5px solid var(--rule); }
+
+  .days-container {
+    max-width: 1200px;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 48px;
+  }
+
+  @media (max-width: 1200px) {
+    .days-container { grid-template-columns: 1fr; padding: 0 20px; }
+    header { padding: 40px 20px 36px; }
+  }
+
+  .day-column {}
+
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .day-number {
+    
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .day-1 .day-number { color: var(--accent); }
+  .day-2 .day-number { color: var(--accent); }
+
+  .day-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .slot {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+
+  .slot-time {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    width: 46px;
+    flex-shrink: 0;
+    padding-top: 14px;
+    text-align: right;
+  }
+
+  .slot-body {
+    flex: 1;
+  }
+
+  /* BREAK */
+  .card-break {
+    background: var(--break-bg);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 9px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* INVITED */
+  .card-invited {
+    background: var(--invited-bg);
+    color: var(--invited-fg);
+    border-radius: 4px;
+    padding: 14px 16px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-invited::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+  }
+
+  .day-1 .card-invited::before { background: var(--accent); }
+  .day-2 .card-invited::before { background: var(--accent); }
+
+  .card-type {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 5px;
+  }
+
+  .card-invited .card-type { color: var(--invited-fg); }
+
+  .card-title {
+    
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+
+  .card-invited .card-title { color: #f5f2eb; font-size:16px; }
+
+  .card-speaker,.card-description {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  .card-invited  details {
+  	font-size: 14px;
+  	font-weight: 500;
+  }
+
+
+  .card-affiliation {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+
+  .duration-tag {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 2px 7px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.1);
+    color: rgba(245,242,235,0.6);
+  }
+
+  /* SESSION BLOCK */
+  .card-session {
+    border: 1px solid var(--contributed-border);
+    border-radius: 4px;
+    background: var(--contributed-bg);
+    overflow: hidden;
+  }
+
+  .session-header {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #faf8f5;
+  }
+
+  .session-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--session-label);
+  }
+
+  .session-count {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+
+  .talk-row {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .talk-row:last-child { border-bottom: none; }
+
+  .talk-index {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted);
+    width: 18px;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+
+  .talk-info {}
+
+  .talk-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+
+  .talk-speaker {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .talk-time {
+    font-size: 10px;
+    color: var(--contributed-border);
+    margin-left: auto;
+    flex-shrink: 0;
+    padding-top: 3px;
+    font-weight: 500;
+  }
+
+  /* OPEN PROBLEMS */
+  .card-special {
+    background: var(--break-bg);
+    border: 1px dashed var(--contributed-border);
+    border-radius: 4px;
+    padding: 14px 14px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--session-label);
+  }
+  .card-special .card-type { color: var(--muted); font-size: 9.5px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 4px; }
