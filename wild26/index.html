@@ -1,479 +1,470 @@
 <!doctype html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Automata in the Wild 2026</title>
-        <link rel="stylesheet" href="style.css" type="text/css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="thumbnail" content="logo_inv.gif" />
-        <script src="jquery.js"></script>
-        <!-- MathJax for LaTeX rendering -->
-        <script>
-        window.MathJax = {
-            tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
-            svg: {fontCache: 'global'}
-        };
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/ol@v10.7.0/dist/ol.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.7.0/ol.css">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Automata in the Wild 2026</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="thumbnail" content="logo_inv.gif" />
+    <script src="jquery.js"></script>
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+    window.MathJax = {
+        tex: { inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)']
+            ] },
+        svg: { fontCache: 'global' }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.7.0/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.7.0/ol.css">
+</head>
 
-
-
-    </head>
-    <body>
-        <div id="main" class="width">
-            <aside id="sidebar" class="column-left">
-                <header>
-                    Automata in the Wild 2026
-                </header>
-                <nav id="mainnav">
-                    <ul>
-                        <li class="selected-item"><a href="#welcome">Welcome</a></li>
-                        <li><a href="#program">Program</a></li>
-                        <li><a href="#register">Register</a></li>
-                        
-                        <li><a href="#organisation">Organisation</a></li>
-                        <li><a href="#past-events">Related Events</a></li>
-
-                        
-                    </ul>
-                </nav>
-            </aside>
-            <div class="column-right">
-                <div class="photo-header">
-
-      <div class="text-overlay">Automata in the Wild 2026
-        <p style="font-size: 0.75em;">
-            University of Liverpool
-        </p>
-        </div>
+<body>
+    <div id="main" class="width">
+        <aside id="sidebar" class="column-left">
+            <header>
+                Automata in the Wild 2026
+            </header>
+            <nav id="mainnav">
+                <ul>
+                    <li class="selected-item"><a href="#welcome">Welcome</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#organisation">Organisation</a></li>
+                    <li><a href="#past-events">Related Events</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="column-right">
+            <div class="photo-header">
+                <div class="text-overlay">Automata in the Wild 2026
+                    <p style="font-size: 0.75em;">
+                        University of Liverpool
+                    </p>
                 </div>
-
-                <div id="content">
-                    <div id="welcome" >
-                        <h1>Automata in the Wild 2026 </h1>
-                        <h2>
-                            Workshop on Automata and Formal Languages
-                        </h2>
-                        <div class="key-info">
-                            <time datetime="2026-03-23">Monday, 23 March 2026</time> and <time datetime="2026-03-24">Tuesday, 24 March 2026</time> 
-                        </div>
-                        <div class="key-info-sm">
-                            University of Liverpool, UK
-                        </div>
-                        <h5>Aim:</h5>
-                        <p>
-                             Automata in the Wild 2026 is a workshop bringing together researchers working in automata theory and related fields in the UK. Speakers have been chosen to represent a diverse range of topics of automata-related research in the UK, including combinatorics on words, dynamical systems, games, logic, and weighted automata.
-                             
-                        </p>
-                        <h5>Topics:</h5>
-                        <p>
-                            Topics of interest include (but are not limited to):
-                        </p>
-                        <ul class="topicgrid">
-                            <li>automata theory,</li>
-                            <li>formal languages,</li>
-                            <li>semigroups,</li>
-                            <li>combinatorics on words,</li>
-                            <li>dynamical systems.</li>
-                        </ul>
+            </div>
+            <div id="content">
+                <div id="welcome">
+                    <h1>Automata in the Wild 2026 </h1>
+                    <h2>
+                        Workshop on Automata and Formal Languages
+                    </h2>
+                    <div class="key-info">
+                        <time datetime="2026-03-23">Monday, 23 March 2026</time> and <time datetime="2026-03-24">Tuesday, 24 March 2026</time>
                     </div>
-                    <div id="program">
-                        <h3>Programme</h3>
-                        <p>
-                            The programme will consist of six invited talks of around one hour, and short contributed talks from participants.
-                        </p>
-                        <h5>Invited Speakers</h5>
-                        <p>
-                            <ul class="speakers">
-                                <li><b>Verification of DCPS with Bounded Context-Switching</b><br><i>Pascal Baumann, Max Planck Institute for Software Systems</i>
-
-<details>
-  <summary style="margin-top:2px;">Abstract (click to expand)</summary>
-  <p>
-    Multi-pushdown automata (MPDA) are a classic computational model
-that can be used to capture the behavior of multithreaded recursive
-programs. Here, each parallel thread is simply modeled by a single
-stack, and there is a fixed number of them. Due to the well known
-fact that most verification problems are undecidable for MPDA, even
-with just two stacks, the literature contains many different ways
-to restrict the runs of this model, in such a manner as to recover
-decidability. A popular restriction of this kind is known as bounded
-context-switching: For a fixed bound k, every parallel thread (or
-stack) may only be interrupted by another thread up to k times.
-</p><p>
-We consider an extended setting, where the number of parallel
-threads is not fixed, and more of them can be spawned dynamically
-during execution. This gives rise to the model of dynamic networks
-of concurrent pushdown systems (DCPS), which we still restrict with
-bounded context-switching. In this setting, we consider various
-verification questions, that have been asked for similar models
-in the past. These include state reachability, non-termination
-(with and without assumptions on fairness), and boundedness of the
-thread buffer. Moreover we consider the novel verification problem
-of Dyck inclusion: Given a model with action sequences over some
-alphabet of bracket pairs, are all its executions well-bracketed?
-Our results close a preexisting complexity gap for state reachability,
-and settle the complexity of several other verification problems,
-where in many cases even decidability was unknown before.
-  </p>
-</details>
-
-
-</li>
-                                <li><b>To be announced.</b><br><i>Sandra Kiefer, University of Oxford</i></li>
-                                <li><b>How not to go bankrupt: Finding optimal strategies in solvency games</b><br>
-<i>Richard Mayr, University of Edinburgh</i><br>
-
-<details>
-  <summary style="margin-top:2px;">Abstract (click to expand)</summary>
-  <p>
-    Solvency games are a gambling problem on infinite-state MDPs where the investor's
-    fortune, a natural number n, is the state. In every round, the investor chooses
-    an action from a finite action set Act = {A,B,...}, and every action yields a
-    distribution over integer-valued gains/losses in an interval [-x,+y].
-  </p>
-  <p>
-    The risk-averse investor wants to maximize the chance of staying solvent,
-    i.e., to minimize the probability of eventual ruin (reaching a fortune below zero).
-    A generalized version adds control-states, and thus becomes a problem about
-    1-counter MDPs.
-  </p>
-  <p>
-    It is easy to show that solvency games always admit optimal memoryless
-    deterministic strategies σ: ℕ → Act, i.e., the optimal action depends only
-    on the fortune n. However, how does the function σ behave? If the fortune n
-    is sufficiently large, does it suffice to always pick an action σ(n) with
-    maximal expected payoff? Is σ eventually constant, or at least eventually
-    periodic? And is σ computable?
-  </p>
-  <p>
-    Already in the case of gains in the interval [-3,+1], it is possible for the
-    optimal strategy to be unique but aperiodic (disproving a conjecture of
-    Kucera: RP'2012). However, in the special case of gains in [-2,+1] there
-    always exists an optimal strategy that either has a pure tail or strictly
-    alternates between just two actions.
-  </p>
-  <p>
-    The optimal strategy is computable if it is unique (but without any known
-    complexity bound). Moreover, some optimal strategy is computable (in time
-    polynomial in n) in the case of gains in [-x,+1], while computability in
-    the general case remains open.
-  </p>
-</details>
-                                </li>
-                                <li><b>To be announced.</b><br><i>Igor Potapov, University of Liverpool</i></li>
-                                <li><b>Intersecting Dense Automata: Constructions, Complexity and Certificates.</b><br>
-<i>Neha Rino, University of Warwick</i><br>
-
-<details>
-  <summary>Abstract (click to expand)</summary>
-<p>  Given $k$ nondeterministic finite automata (NFA) $A_1, \dots, A_k$, finding an NFA for the language $L(A_1) \cap \dots \cap L(A_k)$ is a basic problem in automata theory. We observe that the classical Cartesian product construction is
-non-optimal in the worst case, that is, if the automata have many transitions.
-For a fixed alphabet, the Cartesian product of two NFA may have $\Theta(m^2)$ transitions if these NFA have at most $n$ states and $m$ transitions each. 
-</p><p>
- In this talk, we describe alternative constructions with $O(m n)$ transitions;
-or $O(m n^{k-1})$ for the intersection of $k$ NFA (for fixed $k \ge 2$ and alphabet $\Sigma$). This gives a faster algorithm for deciding NFA intersection emptiness, that is, deciding whether $k$ given NFA accept a word in common.
-We also show that this new algorithm is optimal, unless there exists a breakthrough
-combinatorial algorithm for detecting $(k+1)$-cliques in undirected graphs.
- Lastly, we show how these new product constructions allow us to certify NFA intersection emptiness faster. </p>
-</details></li>
-                                <li>
-                                <b>Automaticity aspects of combinatorial complexity functions of infinite words</b><br>
-<i>Markus Whiteland, University of Loughborough</i><br>
-
-<details>
-  <summary>Abstract (click to expand)</summary>
-
-  <p>
-    Infinite words can be used to encode interesting properties of the orbits of discrete dynamical systems. Analysing the complexity of such a system may then be analysed through this encoding. Combinatorially speaking, quite often its complexity is measured through its finite factors, or finite contiguous blocks appearing in the infinite encoding. For example, the factor complexity function (counting the number of distinct blocks of a given length) reveals interesting global properties of the word, and the notion has been applied successfully, e.g., in transcendental number theory. Other combinatorial complexity functions have also been introduced in recent years.
-  </p>
-
-  <p>
-    When an infinite word has a finite description (e.g., it is generated by a Deterministic Finite Automaton with Output (DFAO)), one might hope that its combinatorial complexity functions also have finite descriptions (e.g., given by a weighted automaton over the integers). In this talk, I will give an overview of automatic aspects of combinatorial complexity functions of sequences generated by DFAOs and discuss some recent results and ongoing research about the so-called binomial complexity functions (functions that count factors up to similarity of scattered subword structures) of automatic sequences.
-  </p>
-
-  <p>
-    The talk is based on joint work with M. Rigo, M. Stipulanti, and N. Wingate.
-  </p>
-
-</details></li>
-                            </ul>
-                        </p>
-                        <h5>Early Career Talks</h5>
-                        <p>
-                            The program will feature 9 short talks from early career researchers. 
-                        </p><p>
-                            Registration to give a short talk has now closed, but it is still possible to register to attend.
-                            <s>Please <strong>indicate your interest in giving a short talk</strong> on any related topic (approx 10-15 minutes) when registering. PhD Students and Early Career Researchers are particularly encouraged to submit a talk.</s>
-                        </p>
-                        <h5>Schedule</h5>
-                        <p>
-                            The talks will start at 10am on Monday 23rd. Coffee and registration will be available from around 9:30.
-                        </p>
-                        <p>
-                            A detailed programme will be made available in due course.
-                        </p>
-                        <p>
-                            Lunch will be provided.
-                        </p>
-                        
+                    <div class="key-info-sm">
+                        University of Liverpool, UK
                     </div>
-                       
-
-                    <div id="register">
-                    <h3>Register</h3>
-                        <p> 
-                            To attend the workshop, please register using the following link by <strong>Monday, 9 March 2026</strong>:<br>
-                            <a class="button" href="https://forms.cloud.microsoft/e/s5UKEdPgJH">Registration form</a>
-                        </p>
-                        <p>
-                            There is no registration fee. 
-                        </p>
-                        <p>
-                            Registration to give a short talk has now closed, but it is still possible to register to attend.
-                        </p>
-
-                        <h5>Financial Support:</h5>
-                        <p>
-                            Limited support for travel and accommodation is available for students and early career researchers who would otherwise not be able to attend. 
-                        </p>
-                        <p>
-                            To request the support, please send an email to <script>
-                                document.write('<a class="email" href="mailto:' +  maild + '">'+maild+'</a>')
-                            </script> by <strong>Monday, 23 February 2026</strong>, with the subject line "WILD26 Financial Support Request",
-                            stating:
-                            <ul>
-                                <li>Your name, affiliation, and whether you are a student or early career researcher.</li>
-                                <li>A brief explanation of why you need support, confirming that your supervisor / institution will not cover the cost.</li>
-                                <li>Whether your participation depends on support for travel costs (with estimate), accomodation costs, or both? Keeping the costs requested as low as possible will help us support as many as possible.</li>
-                            </ul>
-                            </p>
-                            <p>
-                                <strong>Update 2 March: There is limited remaining funds.</strong> Please get in touch as soon as possible if you are interested in financial support to attend.
-                        </p>
-                        </div>
-                       
-
-                    <div id="organisation">
-                        <h3>Organisation</h3>
-                        <p>
-                            Automata in the Wild 2026 is organised by:
-                        </p>
-                        <script>
-                                var maild = 'D'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'8'+'0'+';'+'u'+'&'+'#'+'1'+'1'+'4'+';'+'&'+'#'+'1'+'1'+'5'+';'+'e'+'r'+'@'+'l'+'i'+'v'+'&'+'#'+'1'+'0'+'1'+';'+'r'+'p'+'o'+'o'+'l'+'&'+'#'+'4'+'6'+';'+'a'+'c'+'&'+'#'+'4'+'6'+';'+'u'+'&'+'#'+'1'+'0'+'7'+';';
-                                var maila =
-'&'+'#'+'1'+'0'+'0'+';'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'9'+'9'+';'+'&'+'#'+'1'+'0'+'4'+';'+'&'+'#'+'1'+'0'+'5'+';'+'&'+'#'+'1'+'1'+'5'+';'+'&'+'#'+'1'+'1'+'6'+';'+'&'+'#'+'1'+'0'+'5'+';'+'&'+'#'+'1'+'0'+'7'+';'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+'1'+'8'+';'+'@'+'&'+'#'+'1'+'1'+'9'+';'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'1'+'1'+'4'+';'+'&'+'#'+'1'+'1'+'9'+';'+'&'+'#'+'1'+'0'+'5'+';'+'&'+'#'+'9'+'9'+';'+'&'+'#'+'1'+'0'+'7'+';'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'9'+'9'+';'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'1'+'1'+'7'+';'+'&'+'#'+'1'+'0'+'7'+';';
-
-var mailh =
-'&'+'#'+'7'+'6'+';'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'8'+'0'+';'+'&'+'#'+'1'+'1'+'4'+';'+'&'+'#'+'1'+'0'+'5'+';'+'&'+'#'+'1'+'0'+'3'+';'+'&'+'#'+'1'+'0'+'5'+';'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+'1'+'0'+';'+'&'+'#'+'1'+'0'+'5'+';'+'&'+'#'+'1'+'0'+'1'+';'+'&'+'#'+'1'+'1'+'4'+';'+'&'+'#'+'1'+'1'+'1'+';'+'@'+'&'+'#'+'1'+'0'+'8'+';'+'&'+'#'+'9'+'8'+';'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+'1'+'4'+';'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'9'+'9'+';'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'1'+'1'+'7'+';'+'&'+'#'+'1'+'0'+'7'+';';
-
-var maill =
-'&'+'#'+'7'+'6'+';'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'6'+'8'+';'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'1'+'1'+'8'+';'+'&'+'#'+'1'+'0'+'5'+';'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'1'+'1'+'7'+';'+'&'+'#'+'1'+'0'+'0'+';'+'@'+'&'+'#'+'1'+'1'+'7'+';'+'&'+'#'+'1'+'0'+'1'+';'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'9'+'9'+';'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'1'+'1'+'7'+';'+'&'+'#'+'1'+'0'+'7'+';';
-
-                        </script>
-                        <div class="people">
-
-                            <div class="person">
-                                <a href="https://warwick.ac.uk/fac/sci/dcs/people/dmitry_chistikov/">
-                                Dmitry Chistikov</a><bR>
-                            <script>
-                                document.write('<a class="email" href="mailto:' +  maila + '">'+maila+'</a>')
-                            </script>
-                            </div>
-                            <div class="person">
-                                <a href="https://research-portal.uea.ac.uk/en/persons/laure-daviaud/">
-                                Laure Daviaud</a> 
-                                <br>
-                            <script>
-                                document.write('<a class="email" href="mailto:' +  maill + '">'+maill+'</a>')
-                            </script>
-                            </div>
-                            <div class="person">
-                                <a href="https://www.lboro.ac.uk/departments/compsci/staff/luca-prigioniero/">
-                                Luca Prigioniero</a><bR>
-                            <script>
-                                document.write('<a class="email" href="mailto:' +  mailh + '">'+mailh+'</a>')
-                            </script>
-                            </div>
-
-                            <div class="person">
-                                <a href="https://www.davidpurser.net/">
-                                David Purser</a><br>
-
-                            <script>
-                                document.write('<a class="email" href="mailto:' +  maild + '">'+maild+'</a>')
-                            </script>
-                            </div>
-                        </div>
-                        <p>
-                            <h5>Contact:</h5>
-                            For any questions regarding the workshop, please contact the organisers via email.      
-                            
-                            Click
-                            <script>
-                                document.write('<a href="mailto:' +  maild + ';' +maila + ';'+maill + ';'  + mailh+ '">here</a>')
-                            </script> to email all organisers.
-                        </p>
-                        <h5>Location:</h5>
-                        <p> The workshop takes place in person at the <a href="https://maps.app.goo.gl/oG9axQuFqPHLynp48">Ashton Building</a> on the campus of The University of Liverpool.</p>
-                        <p style="margin-bottom:2px">
-                            Sessions take place in the Ashton Lecture Theatre.
-                        </p>
-                        <div style="margin-bottom: 5px;">
-                            <img src="ashton.jpg" alt="Ashton Building, University of Liverpool" style="height:300px;"/>
-                            <div id="maplocation" style="width:400px; max-width: 100%;height:300px;margin-top:5px;border:1px solid black; display: inline-block;"></div>
-                        </div>
-                        
-
-
-                        
-                        <h5>Accommodation and Travel options:</h5>
-                        <p> There are many hotels in Liverpool, the following accommodation options are available close to the University campus:
-                            <ul>
-                                <li><a href="https://all.accor.com/hotel/B737/index.en.shtml">Novotel Liverpool Paddington Village</a> <br> 
-                                    4*, adjacent to campus </li>
-                                <li><a href="https://www.theliner.co.uk/">The Liner Hotel</a> <br> 
-                                    3*, next to the station, 10 minute walk</li>
-                                <li><a href="https://www.premierinn.com/gb/en/hotels/england/merseyside/liverpool/liverpool-city-centre-lime-street.html">Premier Inn Liverpool City Centre (Lime Street) hotel</a> <br> 
-                                    3*, adjacent to station, 15 minute walk</li>
-                                <li><a href="https://www.adagio-city.com/gb/hotel-7332-aparthotel-adagio-liverpool-city-centre/index.shtml">Aparthotel Adagio Liverpool City Centre</a> <br> 
-                                    4*, aparthotel, 15 minute walk</li>
-                                <li><a href="https://www.ihg.com/holidayinn/hotels/gb/en/liverpool/lplls/hoteldetail">Holiday Inn Liverpool - City Centre by IHG</a><br>
-                                    4*, adjacent to station, 15 minute walk
-                                </li>
-                                <li><a href="https://www.radissonhotels.com/en-us/hotels/radisson-red-liverpool">Radisson RED Liverpool (Lime Street) </a><br>
-                                    4*, adjacent to station, 15 minute walk
-                                </li>
-                            </ul>
-                        </p>
-                        <p>
-                            We encourage participants to travel by train where possible. Parking is limited and can be expensive. Where cars are used, please consider car-sharing.
-                        </p>
-                        <p>
-                            Please note when travelling to Liverpool that the main train station is <a href="https://maps.app.goo.gl/ZnkheNmLZzwWLMqZ8">Liverpool Lime Street</a> (not Liverpool Central).
-                        </p>
-                        <h5>Acknowledgements:</h5>
-                        <p>
-                            This workshop is made possible through the generous support
-                            <a href="https://www.liverpool.ac.uk/computer-science-and-informatics/">The School of Computer Science and Informatics</a>, University of Liverpool.
-                        </p>
-                    </div>
-                    <div id="past-events">
-                    <h3>Past Events</h3>
+                    <h5>Aim:</h5>
                     <p>
-                    <ul>
-                        <li>
-                            <a href="https://warwick.ac.uk/fac/sci/dcs/people/dmitry_chistikov/wild25/">Automata in the Wild 2025</a>, University of Warwick.
-                        </li>
-                        <li><a href="https://raynadimitrova.github.io/wild20/">Automata in the Wild 2021</a>, University of Warwick/Online.
-                        </li>
+                        Automata in the Wild 2026 is a workshop bringing together researchers working in automata theory and related fields in the UK. Speakers have been chosen to represent a diverse range of topics of automata-related research in the UK, including combinatorics on words, dynamical systems, games, logic, and weighted automata.
+                    </p>
+                    <h5>Topics:</h5>
+                    <p>
+                        Topics of interest include (but are not limited to):
+                    </p>
+                    <ul class="topicgrid">
+                        <li>automata theory,</li>
+                        <li>formal languages,</li>
+                        <li>semigroups,</li>
+                        <li>combinatorics on words,</li>
+                        <li>dynamical systems.</li>
                     </ul>
+                </div>
+                <div id="program">
+                    <h3>Programme</h3>
+                    <p>
+                        The programme will consist of six invited talks of around one hour, and short contributed talks from participants.
+                    </p>
+                    <h5>Invited Speakers</h5>
+                    <p>
+                        <ul class="speakers">
+                            <li><b>Verification of DCPS with Bounded Context-Switching</b><br><i>Pascal Baumann, Max Planck Institute for Software Systems</i>
+                                <details>
+                                    <summary style="margin-top:2px;">Abstract (click to expand)</summary>
+                                    <p>
+                                        Multi-pushdown automata (MPDA) are a classic computational model
+                                        that can be used to capture the behavior of multithreaded recursive
+                                        programs. Here, each parallel thread is simply modeled by a single
+                                        stack, and there is a fixed number of them. Due to the well known
+                                        fact that most verification problems are undecidable for MPDA, even
+                                        with just two stacks, the literature contains many different ways
+                                        to restrict the runs of this model, in such a manner as to recover
+                                        decidability. A popular restriction of this kind is known as bounded
+                                        context-switching: For a fixed bound k, every parallel thread (or
+                                        stack) may only be interrupted by another thread up to k times.
+                                    </p>
+                                    <p>
+                                        We consider an extended setting, where the number of parallel
+                                        threads is not fixed, and more of them can be spawned dynamically
+                                        during execution. This gives rise to the model of dynamic networks
+                                        of concurrent pushdown systems (DCPS), which we still restrict with
+                                        bounded context-switching. In this setting, we consider various
+                                        verification questions, that have been asked for similar models
+                                        in the past. These include state reachability, non-termination
+                                        (with and without assumptions on fairness), and boundedness of the
+                                        thread buffer. Moreover we consider the novel verification problem
+                                        of Dyck inclusion: Given a model with action sequences over some
+                                        alphabet of bracket pairs, are all its executions well-bracketed?
+                                        Our results close a preexisting complexity gap for state reachability,
+                                        and settle the complexity of several other verification problems,
+                                        where in many cases even decidability was unknown before.
+                                    </p>
+                                </details>
+                            </li>
+                            <li><b>To be announced.</b><br><i>Sandra Kiefer, University of Oxford</i></li>
+                            <li><b>How not to go bankrupt: Finding optimal strategies in solvency games</b><br>
+                                <i>Richard Mayr, University of Edinburgh</i><br>
+                                <details>
+                                    <summary style="margin-top:2px;">Abstract (click to expand)</summary>
+                                    <p>
+                                        Solvency games are a gambling problem on infinite-state MDPs where the investor's
+                                        fortune, a natural number n, is the state. In every round, the investor chooses
+                                        an action from a finite action set Act = {A,B,...}, and every action yields a
+                                        distribution over integer-valued gains/losses in an interval [-x,+y].
+                                    </p>
+                                    <p>
+                                        The risk-averse investor wants to maximize the chance of staying solvent,
+                                        i.e., to minimize the probability of eventual ruin (reaching a fortune below zero).
+                                        A generalized version adds control-states, and thus becomes a problem about
+                                        1-counter MDPs.
+                                    </p>
+                                    <p>
+                                        It is easy to show that solvency games always admit optimal memoryless
+                                        deterministic strategies σ: ℕ → Act, i.e., the optimal action depends only
+                                        on the fortune n. However, how does the function σ behave? If the fortune n
+                                        is sufficiently large, does it suffice to always pick an action σ(n) with
+                                        maximal expected payoff? Is σ eventually constant, or at least eventually
+                                        periodic? And is σ computable?
+                                    </p>
+                                    <p>
+                                        Already in the case of gains in the interval [-3,+1], it is possible for the
+                                        optimal strategy to be unique but aperiodic (disproving a conjecture of
+                                        Kucera: RP'2012). However, in the special case of gains in [-2,+1] there
+                                        always exists an optimal strategy that either has a pure tail or strictly
+                                        alternates between just two actions.
+                                    </p>
+                                    <p>
+                                        The optimal strategy is computable if it is unique (but without any known
+                                        complexity bound). Moreover, some optimal strategy is computable (in time
+                                        polynomial in n) in the case of gains in [-x,+1], while computability in
+                                        the general case remains open.
+                                    </p>
+                                </details>
+                            </li>
+                            <li><b>To be announced.</b><br><i>Igor Potapov, University of Liverpool</i></li>
+                            <li><b>Intersecting Dense Automata: Constructions, Complexity and Certificates.</b><br>
+                                <i>Neha Rino, University of Warwick</i><br>
+                                <details>
+                                    <summary>Abstract (click to expand)</summary>
+                                    <p> Given $k$ nondeterministic finite automata (NFA) $A_1, \dots, A_k$, finding an NFA for the language $L(A_1) \cap \dots \cap L(A_k)$ is a basic problem in automata theory. We observe that the classical Cartesian product construction is
+                                        non-optimal in the worst case, that is, if the automata have many transitions.
+                                        For a fixed alphabet, the Cartesian product of two NFA may have $\Theta(m^2)$ transitions if these NFA have at most $n$ states and $m$ transitions each.
+                                    </p>
+                                    <p>
+                                        In this talk, we describe alternative constructions with $O(m n)$ transitions;
+                                        or $O(m n^{k-1})$ for the intersection of $k$ NFA (for fixed $k \ge 2$ and alphabet $\Sigma$). This gives a faster algorithm for deciding NFA intersection emptiness, that is, deciding whether $k$ given NFA accept a word in common.
+                                        We also show that this new algorithm is optimal, unless there exists a breakthrough
+                                        combinatorial algorithm for detecting $(k+1)$-cliques in undirected graphs.
+                                        Lastly, we show how these new product constructions allow us to certify NFA intersection emptiness faster. </p>
+                                </details>
+                            </li>
+                            <li>
+                                <b>Automaticity aspects of combinatorial complexity functions of infinite words</b><br>
+                                <i>Markus Whiteland, University of Loughborough</i><br>
+                                <details>
+                                    <summary>Abstract (click to expand)</summary>
+                                    <p>
+                                        Infinite words can be used to encode interesting properties of the orbits of discrete dynamical systems. Analysing the complexity of such a system may then be analysed through this encoding. Combinatorially speaking, quite often its complexity is measured through its finite factors, or finite contiguous blocks appearing in the infinite encoding. For example, the factor complexity function (counting the number of distinct blocks of a given length) reveals interesting global properties of the word, and the notion has been applied successfully, e.g., in transcendental number theory. Other combinatorial complexity functions have also been introduced in recent years.
+                                    </p>
+                                    <p>
+                                        When an infinite word has a finite description (e.g., it is generated by a Deterministic Finite Automaton with Output (DFAO)), one might hope that its combinatorial complexity functions also have finite descriptions (e.g., given by a weighted automaton over the integers). In this talk, I will give an overview of automatic aspects of combinatorial complexity functions of sequences generated by DFAOs and discuss some recent results and ongoing research about the so-called binomial complexity functions (functions that count factors up to similarity of scattered subword structures) of automatic sequences.
+                                    </p>
+                                    <p>
+                                        The talk is based on joint work with M. Rigo, M. Stipulanti, and N. Wingate.
+                                    </p>
+                                </details>
+                            </li>
+                        </ul>
+                    </p>
+                    <h5>Early Career Talks</h5>
+                    <p>
+                        The program will feature 9 short talks from early career researchers.
                     </p>
                     <p>
-                    <h3>Other automata-related events in the UK</h3>
-                    <ul>
-                        <li>
-                            <a href="https://icalppodcspaa2026.cs.rhul.ac.uk/">ICALP 2026</a>: 53rd EATCS International Colloquium on Automata, Languages and Programming (Royal Holloway, University of London, 06 to 10 July 2026)
-                        </li>
-                        <li>
-                        <a href="https://confest-2026.github.io/">CONFEST 2026</a>: CONCUR (37th International Conference on Concurrency Theory), QEST+FORMATS (International Conference on Quantitative Evaluation of SysTems + International Conference on Formal Modeling and Analysis of Timed Systems; 3rd joint conference), FMICS (31st International Conference on Formal Methods for Industrial Critical Systems) & workshops (Liverpool, 01 to 05 September 2026)
-                        </li>
-                    </ul></p>
+                        Registration to give a short talk has now closed, but it is still possible to register to attend.
+                        <s>Please <strong>indicate your interest in giving a short talk</strong> on any related topic (approx 10-15 minutes) when registering. PhD Students and Early Career Researchers are particularly encouraged to submit a talk.</s>
+                    </p>
+                    <h5>Schedule</h5>
+                    <p>
+                        The talks will start at 10am on Monday 23rd. Coffee and registration will be available from around 9:30.
+                    </p>
+                    <p>
+                        A detailed programme will be made available in due course.
+                    </p>
+                    <p>
+                        Lunch will be provided.
+                    </p>
                 </div>
+                <div id="register">
+                    <h3>Register</h3>
+                    <p>
+                        To attend the workshop, please register using the following link by <strong>Monday, 9 March 2026</strong>:<br>
+                        <a class="button" href="https://forms.cloud.microsoft/e/s5UKEdPgJH">Registration form</a>
+                    </p>
+                    <p>
+                        There is no registration fee.
+                    </p>
+                    <p>
+                        Registration to give a short talk has now closed, but it is still possible to register to attend.
+                    </p>
+                    <h5>Financial Support:</h5>
+                    <p>
+                        Limited support for travel and accommodation is available for students and early career researchers who would otherwise not be able to attend.
+                    </p>
+                    <p>
+                        To request the support, please send an email to <script>
+                        document.write('<a class="email" href="mailto:' + maild + '">' + maild + '</a>')
+                        </script> by <strong>Monday, 23 February 2026</strong>, with the subject line "WILD26 Financial Support Request",
+                        stating:
+                        <ul>
+                            <li>Your name, affiliation, and whether you are a student or early career researcher.</li>
+                            <li>A brief explanation of why you need support, confirming that your supervisor / institution will not cover the cost.</li>
+                            <li>Whether your participation depends on support for travel costs (with estimate), accomodation costs, or both? Keeping the costs requested as low as possible will help us support as many as possible.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Update 2 March: There is limited remaining funds.</strong> Please get in touch as soon as possible if you are interested in financial support to attend.
+                    </p>
                 </div>
-                
-                <footer class="clear">
-                    <hr>
-                    <p>&copy; 2026. Based on <a href="https://web.archive.org/web/20190429211603/http://zypopwebtemplates.com/">Free CSS Templates</a> by ZyPOP</p>
-                </footer>
+                <div id="organisation">
+                    <h3>Organisation</h3>
+                    <p>
+                        Automata in the Wild 2026 is organised by:
+                    </p>
+                    <script>
+                    var maild = 'D' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '8' + '0' + ';' + 'u' + '&' + '#' + '1' + '1' + '4' + ';' + '&' + '#' + '1' + '1' + '5' + ';' + 'e' + 'r' + '@' + 'l' + 'i' + 'v' + '&' + '#' + '1' + '0' + '1' + ';' + 'r' + 'p' + 'o' + 'o' + 'l' + '&' + '#' + '4' + '6' + ';' + 'a' + 'c' + '&' + '#' + '4' + '6' + ';' + 'u' + '&' + '#' + '1' + '0' + '7' + ';';
+                    var maila =
+                        '&' + '#' + '1' + '0' + '0' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '9' + '9' + ';' + '&' + '#' + '1' + '0' + '4' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '1' + '1' + '5' + ';' + '&' + '#' + '1' + '1' + '6' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '1' + '0' + '7' + ';' + '&' + '#' + '1' + '1' + '1' + ';' + '&' + '#' + '1' + '1' + '8' + ';' + '@' + '&' + '#' + '1' + '1' + '9' + ';' + '&' + '#' + '9' + '7' + ';' + '&' + '#' + '1' + '1' + '4' + ';' + '&' + '#' + '1' + '1' + '9' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '9' + '9' + ';' + '&' + '#' + '1' + '0' + '7' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '9' + '7' + ';' + '&' + '#' + '9' + '9' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '1' + '1' + '7' + ';' + '&' + '#' + '1' + '0' + '7' + ';';
+
+                    var mailh =
+                        '&' + '#' + '7' + '6' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '8' + '0' + ';' + '&' + '#' + '1' + '1' + '4' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '1' + '0' + '3' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '1' + '1' + '1' + ';' + '&' + '#' + '1' + '1' + '0' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '1' + '0' + '1' + ';' + '&' + '#' + '1' + '1' + '4' + ';' + '&' + '#' + '1' + '1' + '1' + ';' + '@' + '&' + '#' + '1' + '0' + '8' + ';' + '&' + '#' + '9' + '8' + ';' + '&' + '#' + '1' + '1' + '1' + ';' + '&' + '#' + '1' + '1' + '4' + ';' + '&' + '#' + '1' + '1' + '1' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '9' + '7' + ';' + '&' + '#' + '9' + '9' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '1' + '1' + '7' + ';' + '&' + '#' + '1' + '0' + '7' + ';';
+
+                    var maill =
+                        '&' + '#' + '7' + '6' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '6' + '8' + ';' + '&' + '#' + '9' + '7' + ';' + '&' + '#' + '1' + '1' + '8' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '9' + '7' + ';' + '&' + '#' + '1' + '1' + '7' + ';' + '&' + '#' + '1' + '0' + '0' + ';' + '@' + '&' + '#' + '1' + '1' + '7' + ';' + '&' + '#' + '1' + '0' + '1' + ';' + '&' + '#' + '9' + '7' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '9' + '7' + ';' + '&' + '#' + '9' + '9' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '1' + '1' + '7' + ';' + '&' + '#' + '1' + '0' + '7' + ';';
+                    </script>
+                    <div class="people">
+                        <div class="person">
+                            <a href="https://warwick.ac.uk/fac/sci/dcs/people/dmitry_chistikov/">
+                                Dmitry Chistikov</a><bR>
+                            <script>
+                            document.write('<a class="email" href="mailto:' + maila + '">' + maila + '</a>')
+                            </script>
+                        </div>
+                        <div class="person">
+                            <a href="https://research-portal.uea.ac.uk/en/persons/laure-daviaud/">
+                                Laure Daviaud</a>
+                            <br>
+                            <script>
+                            document.write('<a class="email" href="mailto:' + maill + '">' + maill + '</a>')
+                            </script>
+                        </div>
+                        <div class="person">
+                            <a href="https://www.lboro.ac.uk/departments/compsci/staff/luca-prigioniero/">
+                                Luca Prigioniero</a><bR>
+                            <script>
+                            document.write('<a class="email" href="mailto:' + mailh + '">' + mailh + '</a>')
+                            </script>
+                        </div>
+                        <div class="person">
+                            <a href="https://www.davidpurser.net/">
+                                David Purser</a><br>
+                            <script>
+                            document.write('<a class="email" href="mailto:' + maild + '">' + maild + '</a>')
+                            </script>
+                        </div>
+                    </div>
+                    <p>
+                        <h5>Contact:</h5>
+                        For any questions regarding the workshop, please contact the organisers via email.
+                        Click
+                        <script>
+                        document.write('<a href="mailto:' + maild + ';' + maila + ';' + maill + ';' + mailh + '">here</a>')
+                        </script> to email all organisers.
+                    </p>
+                    <h5>Location:</h5>
+                    <p> The workshop takes place in person at the <a href="https://maps.app.goo.gl/oG9axQuFqPHLynp48">Ashton Building</a> on the campus of The University of Liverpool.</p>
+                    <p style="margin-bottom:2px">
+                        Sessions take place in the Ashton Lecture Theatre.
+                    </p>
+                    <div style="margin-bottom: 5px;">
+                        <img src="ashton.jpg" alt="Ashton Building, University of Liverpool" style="height:300px;" />
+                        <div id="maplocation" style="width:400px; max-width: 100%;height:300px;margin-top:5px;border:1px solid black; display: inline-block;"></div>
+                    </div>
+                    <h5>Accommodation and Travel options:</h5>
+                    <p> There are many hotels in Liverpool, the following accommodation options are available close to the University campus:
+                        <ul>
+                            <li><a href="https://all.accor.com/hotel/B737/index.en.shtml">Novotel Liverpool Paddington Village</a> <br>
+                                4*, adjacent to campus </li>
+                            <li><a href="https://www.theliner.co.uk/">The Liner Hotel</a> <br>
+                                3*, next to the station, 10 minute walk</li>
+                            <li><a href="https://www.premierinn.com/gb/en/hotels/england/merseyside/liverpool/liverpool-city-centre-lime-street.html">Premier Inn Liverpool City Centre (Lime Street) hotel</a> <br>
+                                3*, adjacent to station, 15 minute walk</li>
+                            <li><a href="https://www.adagio-city.com/gb/hotel-7332-aparthotel-adagio-liverpool-city-centre/index.shtml">Aparthotel Adagio Liverpool City Centre</a> <br>
+                                4*, aparthotel, 15 minute walk</li>
+                            <li><a href="https://www.ihg.com/holidayinn/hotels/gb/en/liverpool/lplls/hoteldetail">Holiday Inn Liverpool - City Centre by IHG</a><br>
+                                4*, adjacent to station, 15 minute walk
+                            </li>
+                            <li><a href="https://www.radissonhotels.com/en-us/hotels/radisson-red-liverpool">Radisson RED Liverpool (Lime Street) </a><br>
+                                4*, adjacent to station, 15 minute walk
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        We encourage participants to travel by train where possible. Parking is limited and can be expensive. Where cars are used, please consider car-sharing.
+                    </p>
+                    <p>
+                        Please note when travelling to Liverpool that the main train station is <a href="https://maps.app.goo.gl/ZnkheNmLZzwWLMqZ8">Liverpool Lime Street</a> (not Liverpool Central).
+                    </p>
+                    <h5>Acknowledgements:</h5>
+                    <p>
+                        This workshop is made possible through the generous support
+                        <a href="https://www.liverpool.ac.uk/computer-science-and-informatics/">The School of Computer Science and Informatics</a>, University of Liverpool.
+                    </p>
+                </div>
+                <div id="past-events">
+                    <h3>Past Events</h3>
+                    <p>
+                        <ul>
+                            <li>
+                                <a href="https://warwick.ac.uk/fac/sci/dcs/people/dmitry_chistikov/wild25/">Automata in the Wild 2025</a>, University of Warwick.
+                            </li>
+                            <li><a href="https://raynadimitrova.github.io/wild20/">Automata in the Wild 2021</a>, University of Warwick/Online.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <h3>Other automata-related events in the UK</h3>
+                        <ul>
+                            <li>
+                                <a href="https://icalppodcspaa2026.cs.rhul.ac.uk/">ICALP 2026</a>: 53rd EATCS International Colloquium on Automata, Languages and Programming (Royal Holloway, University of London, 06 to 10 July 2026)
+                            </li>
+                            <li>
+                                <a href="https://confest-2026.github.io/">CONFEST 2026</a>: CONCUR (37th International Conference on Concurrency Theory), QEST+FORMATS (International Conference on Quantitative Evaluation of SysTems + International Conference on Formal Modeling and Analysis of Timed Systems; 3rd joint conference), FMICS (31st International Conference on Formal Methods for Industrial Critical Systems) & workshops (Liverpool, 01 to 05 September 2026)
+                            </li>
+                        </ul>
+                    </p>
+                </div>
             </div>
-            <div class="clear"></div>
+            <footer class="clear">
+                <hr>
+                <p>&copy; 2026. Based on <a href="https://web.archive.org/web/20190429211603/http://zypopwebtemplates.com/">Free CSS Templates</a> by ZyPOP</p>
+            </footer>
         </div>
-        <script>
-            $(document).ready(function(){
-              prepare = function() {
-                var scrollPos = $(window).scrollTop();
-                $('#content > div').each(function(i){
-                  var offT = $(this).offset().top;
-                  if((offT-scrollPos-20) <= 0) {
+        <div class="clear"></div>
+    </div>
+    <script>
+    $(document).ready(function() {
+        prepare = function() {
+            var scrollPos = $(window).scrollTop();
+            $('#content > div').each(function(i) {
+                var offT = $(this).offset().top;
+                if ((offT - scrollPos - 20) <= 0) {
                     $('.selected-item').removeClass('selected-item')
                     $('#mainnav li').eq(i).addClass('selected-item')
-                  }
-                })
-              };
-              $(window).scroll(prepare);
-              prepare();
-            });
-        </script>
-        <script>
-   const map = new ol.Map({
-    target: 'maplocation',
-    layers: [
-      new ol.layer.Tile({ source: new ol.source.OSM() })
-    ],
-    view: new ol.View({
-      center: ol.proj.fromLonLat([-2.966381,53.406504]),
-      zoom: 14
-    })
-  });
-
-  const markerSource = new ol.source.Vector();
-  const markerLayer = new ol.layer.Vector({ source: markerSource });
-  map.addLayer(markerLayer);
-
-  /**
-   * Add a building marker with a label
-   * @param {number} lon - longitude
-   * @param {number} lat - latitude
-   * @param {string} name - building name
-   * @param {string} color - marker color
-   * @param {string} anchor - text anchor: 'n','s','e','w','ne','nw','se','sw'
-   */
-  function addBuilding(lon, lat, name, color='red', anchor='n') {
-    const feature = new ol.Feature({
-      geometry: new ol.geom.Point(ol.proj.fromLonLat([lon, lat])),
-      name: name
+                }
+            })
+        };
+        $(window).scroll(prepare);
+        prepare();
+    });
+    </script>
+    <script>
+    const map = new ol.Map({
+        target: 'maplocation',
+        layers: [
+            new ol.layer.Tile({ source: new ol.source.OSM() })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([-2.966381, 53.406504]),
+            zoom: 14
+        })
     });
 
-    // offset map for text based on anchor
-    let offset = [0, -15]; // default north
-    switch(anchor.toLowerCase()) {
-      case 'n': offset = [0, -15]; break;
-      case 's': offset = [0, 15]; break;
-      case 'e': offset = [15, 0]; break;
-      case 'w': offset = [-15, 0]; break;
-      case 'ne': offset = [15, -15]; break;
-      case 'nw': offset = [-15, -15]; break;
-      case 'se': offset = [15, 15]; break;
-      case 'sw': offset = [-15, 15]; break;
+    const markerSource = new ol.source.Vector();
+    const markerLayer = new ol.layer.Vector({ source: markerSource });
+    map.addLayer(markerLayer);
+
+    /**
+     * Add a building marker with a label
+     * @param {number} lon - longitude
+     * @param {number} lat - latitude
+     * @param {string} name - building name
+     * @param {string} color - marker color
+     * @param {string} anchor - text anchor: 'n','s','e','w','ne','nw','se','sw'
+     */
+    function addBuilding(lon, lat, name, color = 'red', anchor = 'n') {
+        const feature = new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.fromLonLat([lon, lat])),
+            name: name
+        });
+
+        // offset map for text based on anchor
+        let offset = [0, -15]; // default north
+        switch (anchor.toLowerCase()) {
+            case 'n':
+                offset = [0, -15];
+                break;
+            case 's':
+                offset = [0, 15];
+                break;
+            case 'e':
+                offset = [15, 0];
+                break;
+            case 'w':
+                offset = [-15, 0];
+                break;
+            case 'ne':
+                offset = [15, -15];
+                break;
+            case 'nw':
+                offset = [-15, -15];
+                break;
+            case 'se':
+                offset = [15, 15];
+                break;
+            case 'sw':
+                offset = [-15, 15];
+                break;
+        }
+
+        // set style with circle + text
+        feature.setStyle(new ol.style.Style({
+            image: new ol.style.Circle({
+                radius: 8,
+                fill: new ol.style.Fill({ color: color }),
+                stroke: new ol.style.Stroke({ color: 'white', width: 2 })
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX: offset[0],
+                offsetY: offset[1],
+                font: 'bold 14px sans-serif',
+                fill: new ol.style.Fill({ color: 'black' }),
+                stroke: new ol.style.Stroke({ color: 'white', width: 5 })
+            })
+        }));
+
+        markerSource.addFeature(feature);
     }
 
-    // set style with circle + text
-    feature.setStyle(new ol.style.Style({
-      image: new ol.style.Circle({
-        radius: 8,
-        fill: new ol.style.Fill({ color: color }),
-        stroke: new ol.style.Stroke({ color: 'white', width: 2 })
-      }),
-      text: new ol.style.Text({
-        text: name,
-        offsetX: offset[0],
-        offsetY: offset[1],
-        font: 'bold 14px sans-serif',
-        fill: new ol.style.Fill({ color: 'black' }),
-        stroke: new ol.style.Stroke({ color: 'white', width: 5 })
-      })
-    }));
-
-    markerSource.addFeature(feature);
-  }
-
-  // Your buildings
-  addBuilding(-2.966381,53.406504, "Ashton Building", 'red', 's');
-</script>
-    </body>
+    // Your buildings
+    addBuilding(-2.966381, 53.406504, "Ashton Building", 'red', 's');
+    </script>
+</body>
 
 </html>
