@@ -718,6 +718,12 @@ margin-top:2px; }
     color: var(--session-label);
   }
 
+  .session-chair{
+    text-transform: none;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+  }
+
   .session-count {
     font-size: 10px;
     font-weight: 500;
