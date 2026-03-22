@@ -455,7 +455,13 @@ footer p a:hover { color:#333; border-bottom-color: #333; }
     -2px -1px white;
 }
 
+  
+@media screen and (max-width: 1000px) {
+  .text-overlay {
+    font-size: 3.1em;
+  }
 
+}
 
 @media screen and (max-width: 740px) {
 
@@ -471,6 +477,10 @@ footer p a:hover { color:#333; border-bottom-color: #333; }
 	#column-right, aside#sidebar { position: relative; float: none; width: auto; margin-left: 0; }
 
 	
+  .text-overlay {
+    font-size: 3.1em;
+  }
+
 }
 
 
@@ -480,6 +490,9 @@ footer p a:hover { color:#333; border-bottom-color: #333; }
 
 	header, header h1 a, header h1 a:hover { text-align: center; padding: 10px 0 0 0; font-size: 1.1em; }
 
+  .text-overlay {
+    font-size: 3em;
+  }
 
 	nav#mainnav ul li a { margin-top: 0; padding: 1em; }
 
